@@ -129,3 +129,20 @@ test(
   await expect(page.locator('#successMsg')).toBeHidden();
   await expect(page.locator('#errorMsg')).toBeHidden();
 });
+
+
+
+// //Wrong test case :-
+// test(
+//   'GIVEN an empty form | WHEN the user clicks login | THEN they are asked to fill all fields',
+//   async ({ page }) => {
+
+//   await page.setContent(LOGIN_PAGE);
+
+//   await page.locator('#loginBtn').click();
+
+//   await expect(page.locator('#emptyMsg')).toBeVisible();
+//   await expect(page.locator('#emptyMsg')).toContainText('Please fill in all fields');
+//   await expect(page.locator('#successMsg')).toBeHidden();
+//   await expect(page.locator('#errorMsg')).toBeHidden();
+// });

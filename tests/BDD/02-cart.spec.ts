@@ -138,3 +138,24 @@ test(
   await expect(page.locator('#total')).toHaveText('0.00');
   await expect(page.locator('#emptyMsg')).toBeVisible();
 });
+
+
+// WRONG TEST CASE — Intentionally fails
+test(
+  'GIVEN a user has items in cart | WHEN they clear the cart | THEN cart is empty and total resets TEST WITH WRONG CASE',
+  async ({ page }) => {
+
+  // GIVEN — user has already added 2 items
+  await page.setContent(CART_PAGE);
+  await page.locator('#product-apple .add-btn').click();
+  await page.locator('#product-orange .add-btn').click();
+  await expect(page.locator('.cart-item')).toHaveCount(2);
+
+  // WHEN — they click Clear Cart
+  await page.locator('#clearBtn').click();
+
+  // THEN — these are all WRONG on purpose to show failures
+  await expect(page.locator('.cart-item')).toHaveCount(5);   // ❌ wrong: expects 5 but cart has 0
+  await expect(page.locator('#total')).toHaveText('99.99');  // ❌ wrong: expects 99.99 but total is 0.00
+  await expect(page.locator('#emptyMsg')).toBeHidden();      // ❌ wrong: message is actually visible
+});
