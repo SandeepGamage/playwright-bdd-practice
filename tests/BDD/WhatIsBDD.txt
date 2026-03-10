@@ -1,0 +1,15 @@
+BDD is not a tool. It is not a feature. It is a way of thinking about how software should behave, written in language everyone understands.
+
+Traditional testing thinks like this:
+    "Test that the login function returns true when credentials match"
+
+BDD thinks like this:
+    "GIVEN a registered user
+    WHEN they enter correct credentials
+    THEN they should be welcomed into the app"
+
+Real World Examples Before Code
+    ATM Machine:
+    GIVEN  I have $500 in my account
+    WHEN   I withdraw $100
+    THEN   my balance should be $400
