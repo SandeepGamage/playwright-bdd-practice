@@ -1,4 +1,4 @@
-BDD is not a tool. It is not a feature. It is a way of thinking about how software should behave, written in language everyone understands.
+BDD(Behaviour Driven Development) Write tests that describe how the app BEHAVES, in language that anyone — developer, tester, or client — can read and understand.
 
 Traditional testing thinks like this:
     "Test that the login function returns true when credentials match"
@@ -13,3 +13,6 @@ Real World Examples Before Code
     GIVEN  I have $500 in my account
     WHEN   I withdraw $100
     THEN   my balance should be $400
+
+TO RUN :- npx playwright test tests/BDD --project=chromium
+TO VIEW RESULT :- npx playwright show-report

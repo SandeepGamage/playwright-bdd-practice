@@ -68,7 +68,7 @@ const CART_PAGE = `
       document.getElementById('clearBtn').addEventListener('click', () => {
         document.getElementById('cart-items').innerHTML = '';
         total = 0;
-        document.getElementById('total').textContent = '0.00';
+        document.getElementById('total').textContent = '1.00'; //❌ wrong: should be 0.00. For check how work with an error
         document.getElementById('emptyMsg').style.display = 'block';
       });
     </script>
@@ -119,6 +119,7 @@ test(
 
 // ══════════════════════════════════════════════════
 // SCENARIO 3 — Clearing the Cart
+// THIS WILL FAIL.....
 // ══════════════════════════════════════════════════
 test(
   'GIVEN a user has items in cart | WHEN they clear the cart | THEN cart is empty and total resets',
