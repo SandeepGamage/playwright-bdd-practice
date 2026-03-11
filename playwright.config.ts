@@ -32,7 +32,7 @@ export default defineConfig({
     trace: 'on-first-retry',
     headless: false,      // shows the browser
     launchOptions: {
-    slowMo: 6000, // slows every action by 800ms
+    slowMo: 2000, // slows every action by 800ms
     },         
   },
 

@@ -80,6 +80,7 @@ test(
 
   // THEN — success message appears and error is hidden
   await expect(page.locator('#successMsg')).toBeVisible();
+  //await expect(page.locator('#successMsg')).toHaveText('Welcome Alice');  ❌ FAILS — toHaveText requires the FULL exact text 
   await expect(page.locator('#successMsg')).toContainText('Welcome Alice');
   await expect(page.locator('#errorMsg')).toBeHidden();
   await expect(page.locator('#emptyMsg')).toBeHidden();
@@ -141,8 +142,8 @@ test(
 
 //   await page.locator('#loginBtn').click();
 
-//   await expect(page.locator('#emptyMsg')).toBeVisible();
+//   await expect(page.locator('#emptyMsg')).toBeHidden();
 //   await expect(page.locator('#emptyMsg')).toContainText('Please fill in all fields');
 //   await expect(page.locator('#successMsg')).toBeHidden();
-//   await expect(page.locator('#errorMsg')).toBeHidden();
+//   await expect(page.locator('#errorMsg')).toBeVisible();
 // });
