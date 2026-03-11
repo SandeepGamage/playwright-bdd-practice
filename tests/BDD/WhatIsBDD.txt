@@ -13,3 +13,6 @@ Real World Examples Before Code
     GIVEN  I have $500 in my account
     WHEN   I withdraw $100
     THEN   my balance should be $400
+
+TO RUN :- npx playwright test tests/BDD --project=chromium
+TO VIEW RESULT :- npx playwright show-report
